@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Başlayanlar - CubeHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">CubeHub</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="beginner.html">Başlangıç</a></li>
+                    <li><a href="advanced.html">İleri Seviye</a></li>
+                    <li><a href="timer.html">Süre</a></li>
+                    <li><a href="store.html">Mağaza</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <h1>Yeni Başlayanlar İçin Rehber</h1>
+        <p>Rubik küpünü çözmeyi öğrenmek için adım adım rehberimiz burada. Katman yöntemi ile başlayacağız.</p>
+
+        <div class="step-container" style="margin-top: 2rem;">
+            <div class="step"
+                style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <div class="step-content" style="flex: 1;">
+                    <h3>Adım 1: Beyaz Artı (White Cross)</h3>
+                    <p>İlk hedefimiz beyaz yüzeyde bir artı oluşturmaktır. Beyaz merkez parçasını bulun ve beyaz kenar
+                        parçalarını (beyaz-mavi, beyaz-kırmızı, vb.) merkezle eşleşecek şekilde yerleştirin.</p>
+                </div>
+                <div class="step-image" style="flex: 0 0 200px;">
+                    <img src="assets/step1-cross.png" alt="Beyaz Artı" style="width: 100%; mix-blend-mode: multiply;">
+                </div>
+            </div>
+
+            <div class="step"
+                style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <div class="step-content" style="flex: 1;">
+                    <h3>Adım 2: İlk İki Katman (First Two Layers)</h3>
+                    <p>Beyaz artıyı tamamladıktan sonra, beyaz köşeleri yerleştirerek ilk katmanı bitirin. Ardından küpü
+                        ters çevirin (beyaz yüz altta) ve orta katman kenarlarını yerlerine yerleştirin.</p>
+                </div>
+                <div class="step-image" style="flex: 0 0 200px;">
+                    <img src="assets/step2-f2l.png" alt="İlk İki Katman" style="width: 100%; mix-blend-mode: multiply;">
+                </div>
+            </div>
+
+            <div class="step"
+                style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <div class="step-content" style="flex: 1;">
+                    <h3>Adım 3: Üst Katman (Sarı Yüz)</h3>
+                    <p>Şimdi üst yüzeyde (sarı) bir artı oluşturun. Panik yapmayın, alt katmanlar bozulsa da
+                        algoritmalarla düzelecektir. Sarı kenarları tamamladıktan sonra köşeleri doğru konuma getirin.
+                    </p>
+                </div>
+                <div class="step-image" style="flex: 0 0 200px;">
+                    <img src="assets/step3-yellow.png" alt="Sarı Artı" style="width: 100%; mix-blend-mode: multiply;">
+                </div>
+            </div>
+
+            <div class="step"
+                style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <div class="step-content" style="flex: 1;">
+                    <h3>Adım 4: Tamamlanmış Küp</h3>
+                    <p>Son olarak sarı köşeleri çevirerek (R' D' R D algoritması ile) renkleri eşleştirin. Tebrikler!
+                        Küpünüz çözüldü.</p>
+                </div>
+                <div class="step-image" style="flex: 0 0 200px;">
+                    <img src="assets/step4-solved.png" alt="Çözülmüş Küp"
+                        style="width: 100%; mix-blend-mode: multiply;">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 CubeHub</p>
+        </div>
+    </footer>
+</body>
+
+</html>

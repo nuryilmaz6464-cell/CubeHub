@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - CubeHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">CubeHub</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="beginner.html">Başlangıç</a></li>
+                    <li><a href="advanced.html">İleri Seviye</a></li>
+                    <li><a href="timer.html">Süre</a></li>
+                    <li><a href="store.html">Mağaza</a></li>
+                    <li><a href="gallery.html" class="active">Galeri</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <h1>Küp Galerisi</h1>
+        <p>Rubik küp koleksiyonumuz ve harika kareler.</p>
+
+        <div class="gallery-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div class="gallery-item"
+                style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="assets/gallery1.png" alt="Rubik Küp - Klasik"
+                    style="width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+            </div>
+            <div class="gallery-item"
+                style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="assets/gallery2.png" alt="Rubik Küp - Karışık"
+                    style="width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+            </div>
+            <div class="gallery-item"
+                style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="assets/gallery3.png" alt="Rubik Küp - Neon"
+                    style="width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+            </div>
+            <div class="gallery-item"
+                style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <img src="assets/gallery4.png" alt="Rubik Küp - Doğa"
+                    style="width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 CubeHub</p>
+        </div>
+    </footer>
+</body>
+
+</html>

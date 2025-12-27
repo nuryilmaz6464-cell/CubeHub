@@ -1,0 +1,515 @@
+ :root {
+     --primary-dark: #07172F;
+     /* Dark blue/black from header/footer */
+     --primary-bg: #D4DCE0;
+     /* Light gray-blue from hero background */
+     --card-bg: #D9D9D9;
+     /* Gray for cards */
+     --text-dark: #000000;
+     --text-light: #FFFFFF;
+     --accent-purple: #9747FF;
+     /* For the stopwatch border */
+     --btn-dark: #333333;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Inter', sans-serif;
+     background-color: #FFFFFF;
+     color: var(--text-dark);
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 2rem;
+ }
+
+ /* Header */
+ header {
+     background-color: var(--primary-dark);
+     padding: 1rem 0;
+ }
+
+ .header-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .logo {
+     color: var(--text-light);
+     font-size: 1.5rem;
+     font-weight: 800;
+     text-decoration: none;
+ }
+
+ nav ul {
+     display: flex;
+     gap: 2rem;
+     list-style: none;
+ }
+
+ nav a {
+     color: var(--text-light);
+     text-decoration: none;
+     font-size: 0.9rem;
+     font-weight: 500;
+     transition: opacity 0.2s;
+ }
+
+ nav a:hover {
+     opacity: 0.8;
+ }
+
+ /* Hero Section */
+ .hero {
+     background-color: var(--primary-bg);
+     padding: 4rem 0;
+     flex: 1;
+     /* Push footer down if content is short */
+     display: flex;
+     align-items: center;
+ }
+
+ .hero-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+ }
+
+ .hero-content {
+     flex: 1;
+     padding-right: 2rem;
+ }
+
+ .hero-content h1 {
+     font-size: 3rem;
+     font-weight: 700;
+     color: var(--primary-dark);
+     margin-bottom: 1rem;
+     line-height: 1.2;
+ }
+
+ .hero-content p {
+     font-size: 1.1rem;
+     color: #555;
+     margin-bottom: 2.5rem;
+     max-width: 400px;
+ }
+
+ .btn-primary {
+     background-color: var(--btn-dark);
+     color: var(--text-light);
+     padding: 1rem 3rem;
+     text-decoration: none;
+     border-radius: 4px;
+     /* Slightly rounded */
+     font-weight: 600;
+     display: inline-block;
+     transition: transform 0.2s, background-color 0.2s;
+     text-transform: uppercase;
+     font-size: 0.9rem;
+     letter-spacing: 1px;
+ }
+
+ .btn-primary:hover {
+     transform: translateY(-2px);
+     background-color: #000;
+ }
+
+ .hero-image {
+     flex: 1;
+     display: flex;
+     justify-content: flex-end;
+ }
+
+
+ .hero-image img {
+     max-width: 100%;
+     height: auto;
+     width: 400px;
+     object-fit: contain;
+     /* To emulate the 'placeholder' look from design if desired, we could add a bg, but clean is better */
+     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+     mix-blend-mode: multiply;
+ }
+
+
+ /* Features Section */
+ .features {
+     padding: 4rem 0;
+     background-color: #FFFFFF;
+ }
+
+ .features-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 2rem;
+ }
+
+ .feature-card {
+     background-color: var(--card-bg);
+     border-radius: 12px;
+     padding: 2rem;
+     text-align: center;
+     text-decoration: none;
+     color: var(--text-dark);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     min-height: 160px;
+     transition: transform 0.2s, box-shadow 0.2s;
+ }
+
+ .feature-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Specific style for active/highlighted card */
+ .feature-card.stopwatch-active {
+     border: 3px solid var(--accent-purple);
+ }
+
+ .icon-wrapper {
+     margin-bottom: 1rem;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .icon-wrapper img {
+     max-height: 100%;
+     width: auto;
+     max-width: 60px;
+     mix-blend-mode: multiply;
+ }
+
+ .feature-card span {
+     font-weight: 600;
+     font-size: 1rem;
+     line-height: 1.4;
+ }
+
+ /* Footer */
+ footer {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+     padding: 2rem 0;
+     text-align: center;
+     font-size: 0.9rem;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+     .header-container {
+         flex-direction: column;
+         gap: 1rem;
+     }
+
+     nav ul {
+         gap: 1rem;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+
+     .hero-container {
+         flex-direction: column-reverse;
+         text-align: center;
+     }
+
+     .hero-content {
+         padding-right: 0;
+         margin-top: 2rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .hero-image {
+         justify-content: center;
+     }
+
+     .hero-content h1 {
+         font-size: 2rem;
+     }
+ }
+
+ /* 3D Cube Styles */
+ .cube-container {
+     perspective: 1000px;
+     width: 300px;
+     height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     user-select: none;
+ }
+
+ .cube {
+     width: 200px;
+     /* Base size, though constructed of cubies */
+     height: 200px;
+     position: relative;
+     transform-style: preserve-3d;
+     transform: rotateX(-30deg) rotateY(-45deg);
+     /* Transition removed here to allow JS control */
+ }
+
+ /* Individual Cubie */
+ .cubie {
+     position: absolute;
+     width: 66px;
+     /* approx 200/3 */
+     height: 66px;
+     transform-style: preserve-3d;
+     transition: transform 0.3s ease-in-out;
+ }
+
+ /* Cubie Faces */
+ .cubie-face {
+     position: absolute;
+     width: 64px;
+     height: 64px;
+     border: 1px solid rgba(0, 0, 0, 0.8);
+     border-radius: 4px;
+     background: black;
+     /* Inner color */
+     box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+ }
+
+ /* Sticker Colors (Inner Class) */
+ .sticker {
+     width: 100%;
+     height: 100%;
+     border-radius: 3px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Inter', sans-serif;
+     font-weight: 800;
+     font-size: 1.5rem;
+     color: #333;
+     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+     user-select: none;
+ }
+
+ .sticker.blink {
+     animation: blinkText 1s infinite alternate;
+     color: white;
+     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+ }
+
+ @keyframes blinkText {
+     from {
+         opacity: 0.5;
+         color: #fff;
+     }
+
+     to {
+         opacity: 1;
+         color: var(--accent-purple);
+     }
+ }
+
+ /* Face Transforms relative to Cubie Center */
+ .cubie-face.face-front {
+     transform: rotateY(0deg) translateZ(33px);
+ }
+
+ .cubie-face.face-back {
+     transform: rotateY(180deg) translateZ(33px);
+ }
+
+ .cubie-face.face-right {
+     transform: rotateY(90deg) translateZ(33px);
+ }
+
+ .cubie-face.face-left {
+     transform: rotateY(-90deg) translateZ(33px);
+ }
+
+ .cubie-face.face-top {
+     transform: rotateX(90deg) translateZ(33px);
+ }
+
+ .cubie-face.face-bottom {
+     transform: rotateX(-90deg) translateZ(33px);
+ }
+
+ /* Colors */
+ .color-white {
+     background-color: #ffffff;
+ }
+
+ .color-yellow {
+     background-color: #ffd500;
+ }
+
+ .color-red {
+     background-color: #b90000;
+ }
+
+ .color-orange {
+     background-color: #ff5900;
+ }
+
+ .color-blue {
+     background-color: #0045ad;
+ }
+
+ /* Dark Blue like standard */
+ .color-green {
+     background-color: #009b48;
+ }
+
+ .color-black {
+     background-color: #111;
+ }
+
+
+ /* Modal Styles */
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     backdrop-filter: blur(5px);
+ }
+
+ .modal-content {
+     background-color: #fff;
+     margin: 10% auto;
+     padding: 3rem;
+     border-radius: 16px;
+     width: 90%;
+     max-width: 800px;
+     position: relative;
+     text-align: center;
+     animation: slideDown 0.3s ease-out;
+ }
+
+ @keyframes slideDown {
+     from {
+         transform: translateY(-50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .close-modal {
+     position: absolute;
+     top: 1rem;
+     right: 2rem;
+     font-size: 2rem;
+     font-weight: bold;
+     color: #333;
+     cursor: pointer;
+     transition: color 0.2s;
+ }
+
+ .close-modal:hover {
+     color: #f44336;
+ }
+
+ .selection-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 2rem;
+     margin-top: 2rem;
+ }
+
+ .selection-card {
+     background: #f5f5f5;
+     padding: 2rem;
+     border-radius: 12px;
+     cursor: pointer;
+     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+     border: 2px solid transparent;
+ }
+
+ .selection-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     border-color: var(--primary-dark);
+ }
+
+ .selection-card h3 {
+     margin-bottom: 0.5rem;
+     color: var(--primary-dark);
+ }
+
+ .selection-card p {
+     font-size: 0.9rem;
+     color: #666;
+ }
+
+ .cube-grid .selection-card img {
+     max-width: 100px;
+     height: auto;
+     margin-bottom: 1rem;
+     mix-blend-mode: multiply;
+ }
+
+ /* Falling Cubes Background */
+ #falling-bg {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     overflow: hidden;
+     background: #fafafa;
+ }
+
+ .falling-cube {
+     position: absolute;
+     transform-style: preserve-3d;
+     animation: fall linear infinite;
+ }
+
+ .f-face {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     background: rgba(255, 255, 255, 0.8);
+     box-sizing: border-box;
+ }
+
+ @keyframes fall {
+     0% {
+         transform: translateY(-100px) rotateX(0) rotateY(0);
+         opacity: 0;
+     }
+
+     10% {
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateY(100vh) rotateX(360deg) rotateY(360deg);
+         opacity: 0;
+     }
+ }

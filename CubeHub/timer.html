@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kronometre - CubeHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="falling-bg"></div>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">CubeHub</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="beginner.html">Başlangıç</a></li>
+                    <li><a href="advanced.html">İleri Seviye</a></li>
+                    <li><a href="timer.html">Süre</a></li>
+                    <li><a href="store.html">Mağaza</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="text-align: center; padding-top: 4rem; padding-bottom: 4rem;">
+        <h1>Kronometre</h1>
+        <div id="timer-display" style="font-size: 6rem; font-weight: 700; font-family: monospace; margin: 2rem 0;">
+            00:00.00</div>
+        <button id="timer-btn" class="btn-primary" style="padding: 1rem 4rem; font-size: 1.2rem;">BAŞLAT</button>
+        <p style="margin-top: 1rem; color: #666;">Boşluk tuşuna basarak başlatın/durdurun.</p>
+
+        <!-- Stats Popup -->
+        <div id="stats-popup"
+            style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 2px solid var(--primary-dark); text-align: center; z-index: 100;">
+            <h3 style="margin-bottom: 1rem;">Sonuç</h3>
+            <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;" id="popup-time">00:00.00</p>
+            <p style="color: #666;">Ortalama (Ao5): <span id="popup-ao5">-</span></p>
+            <button onclick="closePopup()" class="btn-primary"
+                style="margin-top: 1.5rem; font-size: 0.9rem;">TAMAM</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 CubeHub</p>
+        </div>
+    </footer>
+    <script src="timer.js"></script>
+
+</html>

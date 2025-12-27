@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - CubeHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-section {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 0 0 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">CubeHub</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="beginner.html">Başlangıç</a></li>
+                    <li><a href="advanced.html">İleri Seviye</a></li>
+                    <li><a href="timer.html">Süre</a></li>
+                    <li><a href="store.html">Mağaza</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="about.html" class="active">Hakkımızda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <div class="about-section">
+            <div class="about-image">
+                <!-- Using a placeholder for now, or the same cube image if no profile pic -->
+                <img src="assets/gallery1.png" alt="Profil Fotoğrafı"
+                    style="width: 100%; height: 300px; object-fit: cover;">
+            </div>
+            <div class="about-content">
+                <h1>Merhaba, Ben Nur</h1>
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">CubeHub Kurucusu & Full Stack Geliştirici</h3>
+                <p style="margin-bottom: 2rem;">
+                    Rubik küplerine olan tutkum ve yazılım geliştirme becerilerimi birleştirerek CubeHub'ı kurdum.
+                    Amacım, herkesin bu büyüleyici bulmacayı çözebilmesini sağlamak ve küp topluluğunu bir araya
+                    getirmek.
+                </p>
+
+                <h4 style="margin-bottom: 1rem;">Yetenekler</h4>
+                <div class="skills">
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">UI/UX Tasarım</span>
+                    <span class="skill-tag">Speedcubing</span>
+                    <span class="skill-tag">React.js</span>
+                </div>
+
+                <h4 style="margin-bottom: 1rem; margin-top: 2rem;">Konum</h4>
+                <div class="map-container"
+                    style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?q=Isparta&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 CubeHub</p>
+        </div>
+    </footer>
+</body>
+
+</html>
